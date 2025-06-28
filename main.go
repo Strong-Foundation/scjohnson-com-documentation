@@ -19,7 +19,7 @@ func main() {
 	// The remote URL.
 	remoteURL := "https://www.scjohnson.com/lazy?item=%%7B944A252F-2858-42AD-981E-3221DC2C296D%%7D&pageNum=%d"
 	// The given max.
-	givenMax := 25 // 86
+	givenMax := 50 // 86
 	// Prepare to download all PDFs
 	outputFolder := "PDFs/"
 	// Check if the dir exists.
