@@ -247,31 +247,6 @@ func getDataFromURL(uri string) string {
 	return string(body)
 }
 
-// Read a file and return the contents
-func readAFileAsString(path string) string {
-	content, err := os.ReadFile(path)
-	if err != nil {
-		log.Println(err)
-	}
-	return string(content)
-}
-
-// Append and write to file
-func appendAndWriteToFile(path string, content string) {
-	filePath, err := os.OpenFile(path, os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0644)
-	if err != nil {
-		log.Println(err)
-	}
-	_, err = filePath.WriteString(content + "\n")
-	if err != nil {
-		log.Println(err)
-	}
-	err = filePath.Close()
-	if err != nil {
-		log.Println(err)
-	}
-}
-
 // Get the file extension of a file
 func getFileExtension(path string) string {
 	return filepath.Ext(path)
